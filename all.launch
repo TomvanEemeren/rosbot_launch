@@ -1,0 +1,7 @@
+    <group unless="$(arg use_gazebo)">
+        <include file="$(find rosbot_ekf)/launch/all.launch">
+            <arg name="rosbot_pro" value="$(arg rosbot_pro)" />
+        </include>
+
+        <include unless="$(arg use_gazebo)" file="$(find astra_launch)/launch/astra.launch"/>
+    </group>
