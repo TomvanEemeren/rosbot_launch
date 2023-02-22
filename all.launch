@@ -1,7 +1,6 @@
 <launch>
-    <group>
-        <include file="$(find rosbot_ekf)/launch/all.launch"/>
-        <include file="$(find astra_launch)/launch/astra.launch"/>
-        <include file="$(find rplidar_ros)/launch/rplidar.launch" />
-    </group>
+    <include file="$(find rosbot_ekf)/launch/all.launch"/>
+    <include file="$(find astra_launch)/launch/astra.launch"/>
+    <include file="$(find rplidar_ros)/launch/rplidar.launch" />
+    <node pkg="rplidar_ros" tyoe="rplidarNode" name="rplidar_node" />
 </launch>
