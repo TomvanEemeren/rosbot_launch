@@ -1,6 +1,11 @@
 <launch>
 
+  <include file="$(find rosbot_ekf)/launch/all.launch"/>
+  <include file="$(find astra_launch)/launch/astra.launch"/>
+  <include file="$(find rplidar_ros)/launch/rplidar.launch" />
   <node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0 0 0 3.14 0 0 base_link laser 100" />
+
+  <node pkg="rosbot_launch" type="drive_controller_node" name="drive_controller_node" />
 
   <node pkg="gmapping" type="slam_gmapping" name="gmapping_node" output="log">
     <param name="base_frame" value="base_link" />
