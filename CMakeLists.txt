@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(drive_controller)
+project(rosbot_launch)
 
 add_compile_options(-std=c++11)
 
