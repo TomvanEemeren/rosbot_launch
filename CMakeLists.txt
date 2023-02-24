@@ -15,7 +15,7 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
-add_executable(drive_controller_node src/drive_controller.cpp)
+add_executable(drive_controller_node src/drive_controller_node.cpp)
 
 target_link_libraries(drive_controller_node
     ${catkin_LIBRARIES}
