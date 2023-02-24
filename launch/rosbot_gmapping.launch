@@ -5,7 +5,7 @@
     <include file="$(find rplidar_ros)/launch/rplidar.launch" />
     <node pkg="tf" type="static_transform_publisher" name="laser_broadcaster" args="0 0 0 3.14 0 0 base_link laser 100" />
 
-    <node pkg="drive_controller" type="drive_controller_node" name="drive_controller_node" />
+    <node pkg="rosbot_launch" type="drive_controller_node" name="drive_controller_node" />
     <node pkg="rviz" type="rviz" name="rviz" args="-d $(find drive_controller)/rviz/config_file.rviz" />
 
     <node pkg="gmapping" type="slam_gmapping" name="gmapping">
